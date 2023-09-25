@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4342692066957264956
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Endless_Outline
+  m_Shader: {fileID: -6465566751694194690, guid: 6562ac23f457c524e949ae940465f565,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses:
+  - SHADOWCASTER
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_033410430c1e41f38cbe37cd7347362e:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_0ec0db81fb95430191ba9b122120a097:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Albedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emissive_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Height:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pre_Integrated_Scattering:
+        m_Texture: {fileID: 2800000, guid: d722c27ad70f17c41843d076f2b6a37f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - Cutoff_Height: 9.72
+    - HURT_FLASH: 0
+    - Rim_Power: 1
+    - Vector1_011b08ae8492454881f21647046d7364: 44.86
+    - Vector1_0805f1a653364d1fb00c9ca1a30046bb: 1.61
+    - Vector1_195718c9f68f499782987983967ae661: 0
+    - Vector1_6639e655f62c4bf0878a285950a9ad38: 0.01
+    - Vector1_844a91d1120546378bc600c39ce4fc77: 0
+    - Vector1_860473e7aeb247ccbc708bb61c41171d: 0.12
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 0
+    - _CastShadows: 0
+    - _Cull: 1
+    - _DstBlend: 0
+    - _Fresnel_Power: 1
+    - _Glitch_Strength: 0.1
+    - _Height_Intensity: 0
+    - _Outline_Thickness: 0.006
+    - _PS_Add: 0.5
+    - _PS_Multiply: 0.5
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Rim_Intensity: 1
+    - _Rim_Power: 5
+    - _Smoothness: 0.059
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _Wind_Speed: 0.1
+    - _Wind_Strength: 0
+    - _WorkflowMode: 1
+    - _ZTest: 2
+    - _ZWrite: 1
+    - _ZWriteControl: 0
+    m_Colors:
+    - Albedo_Tint: {r: 0, g: 0, b: 0, a: 0}
+    - Color_a5cdfa342d6a41c08bc8e53de5b78807: {r: 0, g: 0.2871296, b: 1, a: 1}
+    - Selection_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Hologram_Color: {r: 2, g: 2, b: 2, a: 0}
+    - _Outline_Color: {r: 0.23584908, g: 0.2056579, b: 0.19950755, a: 0}
+    - _Wind_Direction: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
