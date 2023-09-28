@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Endless_Outline
-  m_Shader: {fileID: -6465566751694194690, guid: 6562ac23f457c524e949ae940465f565,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: ee0ae993d29209e4ca091c24a946208f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -30,11 +29,9 @@ Material:
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses:
-  - SHADOWCASTER
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -96,7 +93,7 @@ Material:
     - _Fresnel_Power: 1
     - _Glitch_Strength: 0.1
     - _Height_Intensity: 0
-    - _Outline_Thickness: 0.006
+    - _Outline_Thickness: 0.003
     - _PS_Add: 0.5
     - _PS_Multiply: 0.5
     - _QueueControl: 0
@@ -104,7 +101,7 @@ Material:
     - _ReceiveShadows: 1
     - _Rim_Intensity: 1
     - _Rim_Power: 5
-    - _Smoothness: 0.059
+    - _Smoothness: 0.318
     - _SrcBlend: 1
     - _Surface: 0
     - _Wind_Speed: 0.1
@@ -119,6 +116,6 @@ Material:
     - Selection_Color: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _Hologram_Color: {r: 2, g: 2, b: 2, a: 0}
-    - _Outline_Color: {r: 0.23584908, g: 0.2056579, b: 0.19950755, a: 0}
+    - _Outline_Color: {r: 47.93726, g: 0, b: 2.6046994, a: 0}
     - _Wind_Direction: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
