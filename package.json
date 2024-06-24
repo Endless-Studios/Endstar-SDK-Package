@@ -1,22 +1,22 @@
 {
-  "name": "com.endless-studios.endstar-sdk",
-  "version": "1.0.3",
-  "displayName": "Endstar SDK",
-  "description": "This package contains all necessary contents to generate and upload content to the Endstar platform!",
-  "unity": "2022.3",
-  "unityRelease": "5f1",
-  "documentationUrl": "",
-  "changelogUrl": "",
-  "licensesUrl": "",
-  "dependencies": {
-    "com.unity.netcode.gameobjects": "1.0.2",
-    "com.unity.nuget.newtonsoft-json": "3.2.1",
-    "com.unity.render-pipelines.universal": "14.0.8"
- },
- "keywords": [],
-  "author": {
-    "name": "Endless Studios",
-    "email": "support@endlessstudios.com",
-    "url": "https://www.endlessstudios.com"
-  }
+    "name": "com.endless-studios.endstar-sdk",
+    "version": "1.0.4",
+    "displayName": "Endstar SDK",
+    "description": "This package contains all necessary contents to generate and upload content to the Endstar platform!",
+    "unity": "2022.3",
+    "unityRelease": "5f1",
+    "documentationUrl": "",
+    "changelogUrl": "",
+    "licensesUrl": "",
+    "dependencies": {
+        "com.unity.netcode.gameobjects": "1.0.2",
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.render-pipelines.universal": "14.0.8"
+    },
+    "keywords": [],
+    "author": {
+        "name": "Endless Studios",
+        "email": "support@endlessstudios.com",
+        "url": "https://www.endlessstudios.com"
+    }
 }
