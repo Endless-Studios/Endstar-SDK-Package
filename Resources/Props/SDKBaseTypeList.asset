@@ -17,184 +17,132 @@ MonoBehaviour:
     type: 
     componentId: b9de8a1e-00b9-44a3-84ac-5936d1a6a5e5
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: BasicSpawnPoint
     type: Endless.Props.ReferenceComponents.SpawnPointReferences, Props, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     componentId: e8a0df38-8370-4082-a733-fe1f0e7020a4
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: WireTesting
-    type: Endless.Props.ReferenceComponents.SpawnPointReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 8f635db1-6563-465b-a911-d002f067852b
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: Sentry
     type: Endless.Props.ReferenceComponents.SentryReferences, Props, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     componentId: dafc866a-364b-4a01-a847-e08f5290f68e
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: NpcEntity
     type: Endless.Gameplay.NpcEntity, Gameplay, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     componentId: cd7a37f8-3b3e-48d6-ba73-4da63b8ae1e5
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: BehaviorNode
-    type: Endless.Gameplay.NpcEntity, Gameplay, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    type: 
     componentId: d46a2ac9-066f-4c5d-9e0c-32d41a76a332
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: CommandNode
-    type: Endless.Gameplay.NpcEntity, Gameplay, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    type: 
     componentId: d42069ba-bcf4-444a-9781-ce0926da6e50
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: BasicProp
-    type: Endless.Gameplay.NpcEntity, Gameplay, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    type: 
     componentId: 831286a7-0999-41e7-ae45-1e432da318eb
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: RuleBlock
-    type: Endless.Gameplay.NpcEntity, Gameplay, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    type: 
     componentId: dec656ba-a4f1-4101-8c29-7d212183e364
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: BouncePad
     type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     componentId: a9a0225c-6c34-47bc-8649-6c7b33b8473b
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: AmbientSettings
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: b76fb1b6-6619-467c-a8a2-aa92dc530996
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: OneHandedMeleeWeaponItem
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 3bff8f35-dae5-4c85-bbbb-d9ca9a75ce1d
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: Filter
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 0c369198-02eb-4967-83d8-7ead9cd0cfea
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: TwoHandedRangedWeaponItem
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 86160f4a-83c7-4b39-a9fa-966a0c85fc3f
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: OneHandedRangedWeaponItem
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 7f2b4d01-193d-45c1-b730-a39c45f979ef
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: JetpackItem
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: ea11af0d-504e-404d-8502-f614ec3e2ddf
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: DashPackItem
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 9606b939-1576-4544-a6da-1be6fded8152
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: TreasureItem
-    type: Endless.Props.ReferenceComponents.BouncePadReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: f60832a2-63a9-466d-83e8-df441fbf37c9
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: InstantPickup
     type: Endless.Props.ReferenceComponents.InstantPickupReferences, Props, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     componentId: 9e64496c-1325-4a94-8e2e-55aebc98d863
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: DepthPlane
-    type: Endless.Props.ReferenceComponents.InstantPickupReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 2042f8ff-3f89-4e97-ab49-e336c12a43f5
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: InteractionNode
-    type: Endless.Props.ReferenceComponents.InstantPickupReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: e281511e-440b-4f83-9a92-e0c3721b6863
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: ConsumableHealingItem
-    type: Endless.Props.ReferenceComponents.InstantPickupReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 44e9d217-dbf9-49a7-a7c7-8952d014f375
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: ThrownBombItem
-    type: Endless.Props.ReferenceComponents.InstantPickupReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: c7702f56-46b1-425a-bcc4-48d68d289757
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: DraggablePhysicsCube
     type: Endless.Props.ReferenceComponents.DraggablePhysicsCubeReferences, Props,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     componentId: 3cc98142-e4c6-47a4-b7d3-83edab4aa870
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: SpikeTrap
     type: Endless.Props.ReferenceComponents.SpikeTrapReferences, Props, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     componentId: 7213531a-9128-4b95-b129-aad8a01a6c41
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: BasicLevelGate
     type: Endless.Props.ReferenceComponents.BasicLevelGateReferences, Props, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     componentId: db8d96c8-a534-4492-b053-f7bb997e7e58
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: Door
     type: Endless.Props.ReferenceComponents.DoorReferences, Props, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     componentId: d7e45813-4679-4839-a725-2748c68ea9d6
     userExposed: 1
-    hasAbilityCosmetics: 0
   - name: Key
-    type: Endless.Props.ReferenceComponents.KeyReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: 03af6486-2988-40bf-a424-8cab68c4e5ab
     userExposed: 0
-    hasAbilityCosmetics: 1
   - name: ResourcePickup
-    type: Endless.Props.ReferenceComponents.KeyReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: d7d835d4-c47b-42a5-81f6-ae780bcf9363
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: TriggerVolume
-    type: Endless.Props.ReferenceComponents.KeyReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: f699aaf0-6232-41c4-9765-8275e9e91e44
     userExposed: 0
-    hasAbilityCosmetics: 0
   - name: TwoHandedMeleeWeaponItem
-    type: Endless.Props.ReferenceComponents.KeyReferences, Props, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    type: 
     componentId: f4caf448-d137-4abc-935a-ec4c1f40aa42
     userExposed: 0
-    hasAbilityCosmetics: 0
