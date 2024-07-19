@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="download-screen" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: center; align-items: stretch; align-self: center; flex-direction: column; opacity: 1;">
+        <ui:VisualElement name="spinner" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 48px; height: 48px; align-items: auto; align-self: center; border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(101, 101, 101); border-right-color: rgb(101, 101, 101); border-top-color: rgb(101, 101, 101); border-bottom-color: rgb(255, 255, 255); border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; justify-content: flex-start;" />
+        <ui:VisualElement name="download-line" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: center; align-self: center; margin-top: 32px;">
+            <ui:Label tabindex="-1" text="Downloading" display-tooltip-when-elided="true" name="downloading-label" />
+            <ui:Label tabindex="-1" text="{XYZ}" display-tooltip-when-elided="true" name="downloading-value" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
