@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -741091445, guid: feacd65c5d132724c989b78383f77280, type: 3}
+  m_Name: SDKComponentList
+  m_EditorClassIdentifier: 
+  componentListEntries:
+  - name: Interactable
+    type: Endless.Props.ReferenceComponents.SimpleInteractableReferences, Props,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    componentId: 39ae24a0-b3af-4912-8e0d-642d0ee74005
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: HittableComponent
+    type: Endless.Props.ReferenceComponents.HittableReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: 176bce3f-20f6-403e-9564-225ee2219d8c
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: HealthComponent
+    type: Endless.Gameplay.HealthComponent, Gameplay, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    componentId: b6cd3d6f-7c29-406a-b6b8-137896fc4992
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: TargeterComponent
+    type: Endless.Props.ReferenceComponents.TargeterReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: cc67644e-7fc6-4d7d-b73e-c8b3d005e8e7
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: TeamComponent
+    type: Endless.Props.ReferenceComponents.TargeterReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: 2465f533-ee3f-41b3-9664-a0cba5b74b7a
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: DynamicVisuals
+    type: Endless.Props.ReferenceComponents.TargeterReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: cb841704-b362-4d8e-99be-3ba474902340
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: TextBubble
+    type: Endless.Props.ReferenceComponents.TargeterReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: d96f0900-7320-48ae-a79b-7564b07ffe7a
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: TriggerComponent
+    type: Endless.Props.ReferenceComponents.TriggerComponentReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: f7d937c8-bfc8-4264-a309-21d56a3f4cba
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: SensorComponent
+    type: Endless.Props.ReferenceComponents.SensorReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: db4b86b1-6689-4a2e-a919-778d43686534
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: ProjectileShooterComponent
+    type: Endless.Props.ReferenceComponents.ProjectileShooterReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: 0544b79e-05b7-487b-9e3c-450058d44bf5
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: TextComponent
+    type: Endless.Props.ReferenceComponents.TextReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: cda23843-25ec-4baf-abbc-8a6255f0ab1c
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: PeriodicEffector
+    type: Endless.Props.ReferenceComponents.TextReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: 4d2efca1-915c-4d1f-a70b-5819c6a55b82
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: Lockable
+    type: Endless.Props.ReferenceComponents.LockableComponentReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: 8edbd575-c6b3-4821-ae3a-3a5b899c884c
+    userExposed: 1
+    hasAbilityCosmetics: 0
+  - name: DynamicNavigationComponent
+    type: Endless.Props.ReferenceComponents.LockableComponentReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: 151fb3bb-e21e-4638-a0af-e9221031fedf
+    userExposed: 1
+    hasAbilityCosmetics: 0
