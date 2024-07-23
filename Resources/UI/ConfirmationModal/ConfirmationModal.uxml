@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="title-bar" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); max-height: none; border-bottom-width: 1px; border-bottom-color: rgba(0, 0, 0, 0.55);">
+        <ui:Label tabindex="-1" text="Title Goes Here" display-tooltip-when-elided="true" name="title-label" style="font-size: 18px; padding-left: 8px; padding-top: 4px; padding-bottom: 4px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="body" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:Label tabindex="-1" text="Body Goes Here" display-tooltip-when-elided="true" name="body-message-label" style="flex-grow: 1; white-space: normal; text-overflow: ellipsis; padding-left: 8px; padding-top: 4px; padding-bottom: 4px; padding-right: 8px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="footer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); max-height: 18px; flex-direction: row; justify-content: space-around;">
+        <ui:Button text="Confirm" display-tooltip-when-elided="true" name="confirm-button" />
+        <ui:Button text="Cancel" display-tooltip-when-elided="true" name="cancel-button" />
+    </ui:VisualElement>
+</ui:UXML>
