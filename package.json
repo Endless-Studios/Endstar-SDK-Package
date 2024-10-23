@@ -1,6 +1,6 @@
 {
     "name": "com.endless-studios.endstar-sdk",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "displayName": "Endstar SDK",
     "description": "This package contains all necessary contents to generate and upload content to the Endstar platform!",
     "unity": "2022.3",
