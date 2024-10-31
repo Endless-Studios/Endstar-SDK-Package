@@ -3,6 +3,7 @@
         <ui:Label tabindex="-1" text="Create A New Prop!" display-tooltip-when-elided="true" name="title-label" style="font-size: 18px; padding-left: 8px; padding-top: 4px; padding-bottom: 4px;" />
     </ui:VisualElement>
     <ui:VisualElement name="body" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-top: 8px;">
+        <ui:Toggle label="Is Official Content:" name="is-official-content" />
         <ui:TextField picking-mode="Ignore" label="Name:" name="name-field" />
         <ui:Label tabindex="-1" text="Description:" display-tooltip-when-elided="true" name="description-label" style="margin-left: 3px; margin-right: 3px;" />
         <ui:TextField picking-mode="Ignore" name="description-field" multiline="true" style="flex-grow: 1;" />
