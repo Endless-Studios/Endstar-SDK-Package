@@ -76,15 +76,15 @@ MonoBehaviour:
   - name: GroupBehavior
     type: 
     componentId: 5f3e9700-8dc5-4ce4-8c80-ef07e1e6e113
-    userExposed: 1
+    userExposed: 0
   - name: GroupCommand
     type: 
     componentId: 3709a1c6-3ead-43c3-80f7-393543ec0a5d
-    userExposed: 1
+    userExposed: 0
   - name: GroupInteraction
     type: 
     componentId: befe3c20-10d6-4dfa-8acc-d980aaf2b773
-    userExposed: 1
+    userExposed: 0
   - name: ConsumableHealing
     type: 
     componentId: 44e9d217-dbf9-49a7-a7c7-8952d014f375
