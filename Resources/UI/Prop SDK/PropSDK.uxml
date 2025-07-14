@@ -25,7 +25,7 @@
                             <ui:Button text="Snap Icon" display-tooltip-when-elided="true" name="snapshot-icon-button" class="secondary-button" />
                         </ui:VisualElement>
                     </ui:VisualElement>
-                    <ui:Template src="project://database/Assets/Resources/UI/Prop%20SDK/LocationOffsetPanel.uxml" name="location-offset-panel" />
+                    <ui:Template src="./LocationOffsetPanel.uxml" name="location-offset-panel" />
                     <ui:Instance template="location-offset-panel" name="location-offset-container" />
                     <ui:VisualElement name="basetype-component-area" class="flex-grow layout-row" style="max-height: 65%; margin-top: 6px;">
                         <ui:VisualElement name="base-types" tooltip="A prop may only have a single base type" class="flex-grow half-width panel-container" style="margin-right: 3px;">
