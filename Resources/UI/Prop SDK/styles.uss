@@ -1,5 +1,5 @@
 /* Import brand colors */
-@import url("project://database/Assets/Resources/UI/Styles/EndlessBrandColors.uss");
+@import url("../Styles/EndlessBrandColors.uss");
 
 /* Existing styles */
 #generation-bounds-field > Label {
