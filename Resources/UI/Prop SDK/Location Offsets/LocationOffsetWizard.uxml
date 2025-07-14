@@ -1,0 +1,135 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Resources/UI/Styles/EndlessBrandColors.uss?fileID=7433441132597879392&amp;guid=b2d11f0be947403685c7dcf6b198f9b2&amp;type=3#EndlessBrandColors" />
+    <Style src="project://database/Assets/Resources/UI/Prop%20SDK/Location%20Offsets/LocationOffsetWizard.uss?fileID=7433441132597879392&amp;guid=febbce38d460409eab19afb7fe355409&amp;type=3#LocationOffsetWizard" />
+    <ui:VisualElement name="wizard-container">
+        <ui:VisualElement name="wizard-header">
+            <ui:Label text="Claimed Cell Wizard" name="wizard-title" class="title" />
+            <ui:VisualElement name="wizard-progress">
+                <ui:VisualElement name="step-indicator-1" class="step-indicator active" />
+                <ui:VisualElement name="step-connector-1" class="step-connector" />
+                <ui:VisualElement name="step-indicator-2" class="step-indicator" />
+                <ui:VisualElement name="step-connector-2" class="step-connector" />
+                <ui:VisualElement name="step-indicator-3" class="step-indicator" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="wizard-pages">
+            <ui:VisualElement name="page-intro" class="wizard-page" style="display: none;">
+                <ui:Label text="What are claimed cells?" class="page-title" />
+                <ui:ScrollView class="content-scroll">
+                    <ui:Label text="Claimed cells define how much space your prop occupies in Endstar." class="paragraph" />
+                    <ui:Label text="They determine:" class="paragraph" />
+                    <ui:VisualElement class="bullet-list">
+                        <ui:Label text="• Collision boundaries for characters and other props" class="bullet-item" />
+                        <ui:Label text="• Pathfinding obstacles for AI navigation" class="bullet-item" />
+                        <ui:Label text="• Space requirements when placing props in-game" class="bullet-item" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="info-box">
+                        <ui:Label text="Well-defined claimed cells make your prop work better in-game and create a better player experience." class="info-text" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:VisualElement name="navigation-buttons" class="navigation-container">
+                    <ui:Button text="Next" name="next-button" class="navigation-button primary" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-bounds" class="wizard-page" style="display: flex;">
+                <ui:Label text="Set Bounds for claimed cells" class="page-title" />
+                <ui:ScrollView class="content-scroll">
+                    <ui:Label text="First, we need to define the volume that will contain your prop&apos;s claimed cells. This is most likely a bounding box that covers the full extents of your prop&apos;s geometry." class="paragraph" />
+                    <ui:Label text="Geometry below the floor level or outside this bounds will not be included in calculating claimed cells." class="paragraph" />
+                    <ui:VisualElement class="control-section">
+                        <ui:Button text="Recalculate from Geometry" name="calculate-bounds-button" class="action-button secondary" />
+                        <ui:Label text="Analyzes your prop&apos;s mesh renderers to find optimal bounds." class="control-help-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="control-section">
+                        <ui:Label text="Bounds Extents" class="control-label" />
+                        <ui:VisualElement class="bounds-extents-container" style="flex-direction: column; margin-left: 0; margin-right: 0;">
+                            <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                <ui:Label text="Min (X, Y, Z)" style="min-width: 80px; -unity-text-align: middle-left;" />
+                                <uie:Vector3IntField name="bounds-min-field" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement style="flex-direction: row; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                                <ui:Label text="Max (X, Y, Z)" style="min-width: 80px; -unity-text-align: middle-left;" />
+                                <uie:Vector3IntField name="bounds-max-field" style="flex-grow: 1;" />
+                            </ui:VisualElement>
+                            <ui:VisualElement class="bounds-info" style="flex-direction: row; justify-content: space-between; margin-top: 5px;">
+                                <ui:Label name="bounds-size-display" text="Size: 1 × 1 × 1" class="control-help-text" style="font-size: 11px;" />
+                                <ui:Label name="bounds-center-display" text="Center: (0, 0, 0)" class="control-help-text" style="font-size: 11px;" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:Label text="Define the grid cell extents that will contain your claimed cells. Min/Max values are inclusive." class="control-help-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="control-section">
+                        <ui:Label text="Offset Axes" class="control-label" />
+                        <ui:VisualElement class="offset-controls" style="flex-direction: row; justify-content: flex-start;">
+                            <ui:Toggle name="wizard-offset-x-toggle" text="Offset X" tooltip="When enabled, X axis is shifted by 0.5" />
+                            <ui:Toggle name="wizard-offset-z-toggle" text="Offset Z" tooltip="When enabled, Z axis is shifted by 0.5" />
+                        </ui:VisualElement>
+                        <ui:Label text="When enabled for an axis, your prop will be centered between world cells, rather than in the middle of one." class="control-help-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="control-section">
+                        <ui:Button text="Edit in Scene View" name="edit-bounds-button" class="action-button" />
+                        <ui:Label text="Enables handles in the Scene view to resize the bounds." class="control-help-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="info-box">
+                        <ui:Label text="Important: Ensure your prop is properly positioned in the Scene view before proceeding. The bounds should fully contain all geometry that needs to claim world space" class="info-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="bounds-warning-box" class="info-box error" style="display: none;">
+                        <ui:Label name="bounds-warning-label" text="Warning: The current bounds size exceeds the recommended maximum. Processing large volumes may be take an extended time." class="info-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="no-mesh-warning-box" class="info-box" style="display: none;">
+                        <ui:Label name="no-mesh-warning-label" text="No mesh renderers found in the prop. You can still define bounds manually and generate default claimed cells. Consider adding visible geometry to your prop for better automatic generation." class="info-text" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:VisualElement name="navigation-buttons" class="navigation-container">
+                    <ui:Button text="Back" name="back-button-1" class="navigation-button" />
+                    <ui:Button text="Next" name="next-button-2" class="navigation-button primary" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="page-generate" class="wizard-page" style="display: none;">
+                <ui:Label text="Generate Claimed Cell" class="page-title" />
+                <ui:ScrollView class="content-scroll">
+                    <ui:Label text="Now you can generate claimed cells based on your prop&apos;s geometry." class="paragraph" />
+                    <ui:VisualElement class="control-section">
+                        <ui:Label text="Detail Level" class="control-label" />
+                        <ui:VisualElement name="VisualElement" class="slider-container" style="flex-direction: row; padding-right: 10px; padding-left: 10px;">
+                            <ui:Slider low-value="0" high-value="0.45" name="generation-detail-slider" inverted="true" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-between;">
+                            <ui:Label text="Claims less space" class="control-help-text" />
+                            <ui:Label text="Claims more space" class="control-help-text" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="control-section">
+                        <ui:Button text="Generate claimed cells" name="generate-button" class="action-button primary" />
+                        <ui:Button text="Cancel Generation" name="cancel-button" class="action-button secondary" style="display: none;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" class="info-box message-box">
+                        <ui:Label name="status-message" text="Ready to generate claimed cells." class="info-text" />
+                        <ui:ProgressBar name="generation-progress" high-value="1" class="full-width" style="display: none;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="generate-no-mesh-warning-box" class="info-box" style="display: none;">
+                        <ui:Label name="generate-no-mesh-warning-label" text="No mesh renderers found in the prop. Generation will create a default claimed cell at the origin (0,0,0). You can modify claimed cells using the Scene view tools." class="info-text" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="results-container" class="results-container" style="display: none;">
+                        <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+                            <ui:Label text="Results" class="section-title" style="margin-top: 0; -unity-text-align: middle-left;" />
+                            <ui:Button text="Clear" name="clear-results-button" class="action-button secondary" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="results-stats">
+                            <ui:Label name="cells-generated-label" text="Cells Generated: 0" />
+                            <ui:Label name="generation-time-label" text="Time: 0.0 seconds" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="manual-edit-section" style="margin-top: 0;">
+                        <ui:Label text="Manual Editing" class="section-title" />
+                        <ui:Label text="You can manually add or remove claimed cells in the Scene view using the Claimed Cell Edit tool. Enable the tool from the Transform toolbar in the Scene view or use the shortcut key &apos;O&apos;. You must have an object selected in the Hierarchy first." class="paragraph" />
+                    </ui:VisualElement>
+                </ui:ScrollView>
+                <ui:VisualElement name="navigation-buttons" class="navigation-container">
+                    <ui:Button text="Back" name="back-button-2" class="navigation-button" />
+                    <ui:Button text="Done" name="done-button" class="navigation-button primary" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,173 @@
+@import url("project://database/Assets/Resources/UI/Styles/EndlessBrandColors.uss?fileID=7433441132597879392&guid=b2d11f0be947403685c7dcf6b198f9b2&type=3#EndlessBrandColors");
+.panel-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.panel-title {
+    font-size: 16px;
+    -unity-font-style: bold;
+    color: var(--pure-white);
+}
+
+.header-buttons-container {
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-button {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border-width: 0;
+    margin-left: 8px;
+}
+
+.help-button {
+    background-image: resource('Icons/d_UnityEditor.InspectorWindow@2x.png');
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.options-button {
+    background-image: resource('Icons/d__Popup@2x.png');
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.panel-content {
+    flex-grow: 1;
+}
+
+.content-row {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.info-container {
+    background-color: var(--space-grey-20);
+    border-width: 1px;
+    border-color: var(--space-grey-50);
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+.status-container {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.status-message {
+    flex-grow: 1;
+    white-space: normal;
+}
+
+.status-icon {
+    width: 12px;
+    height: 12px;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+.success-icon {
+    background-image: resource('Assets/Resources/UI/Icons/status-success.png');
+    -unity-background-image-tint-color: var(--cornflower);
+}
+
+.warning-icon {
+    background-image: resource('Assets/Resources/UI/Icons/status-warning.png');
+    -unity-background-image-tint-color: var(--endless-orange);
+}
+
+.centering-container {
+    width: 140px;
+    flex-direction: column;
+    margin-left: 5px;
+    flex-shrink: 0;
+}
+
+.centering-title {
+    font-size: 14px;
+    -unity-font-style: bold;
+    margin-bottom: 10px;
+    color: var(--pure-white);
+    -unity-text-align: middle-center;
+}
+
+.centering-controls {
+    flex-direction: column;
+}
+
+.centering-controls .unity-label {
+    padding-left: 8px;
+}
+
+.axis-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 2px;
+}
+
+.axis-box {
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+    border-color: var(--pure-white);
+    margin-right: 10px;
+}
+
+.axis-label {
+    font-size: 14px;
+    -unity-font-style: bold;
+    width: 16px;
+    -unity-text-align: middle-center;
+}
+
+.axis-toggle {
+    margin-left: auto;
+    flex-grow: 0.5;
+}
+
+.panel-footer {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.context-menu {
+    position: absolute;
+    font-size: 14px;
+    -unity-font-style: bold;
+    border-width: 1px;
+    border-color: var(--space-grey-80);
+    border-radius: 3px;
+    min-width: 128px;
+    padding: 6px;
+    background-color: var(--space-grey-dark);
+}
+
+.menu-item {
+    font-size: 12px;
+    -unity-font-style: normal;
+    margin-bottom: 4px;
+    padding: 2px 4px;
+}
+
+.menu-item:hover {
+    background-color: var(--endless-orange-20);
+}
+
+.menu-item-delete {
+    color: rgb(236, 0, 0);
+    border-top-width: 1px;
+    border-top-color: var(--space-grey-80);
+    padding-top: 4px;
+}

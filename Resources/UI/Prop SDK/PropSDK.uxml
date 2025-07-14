@@ -1,64 +1,61 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <ui:VisualElement name="window" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+    <Style src="project://database/Assets/Resources/UI/Prop%20SDK/styles.uss?fileID=7433441132597879392&amp;guid=4ac44bbf77a2d094da5cf62bc42736cd&amp;type=3#styles" />
+    <ui:VisualElement name="window" class="flex-grow">
         <uie:Toolbar style="justify-content: flex-start;">
             <uie:ToolbarMenu tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="management-menu" text="File" />
         </uie:Toolbar>
-        <ui:VisualElement name="main-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; visibility: visible; display: flex;">
-            <ui:VisualElement name="sidebar" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0.15); max-width: none; min-width: 192px; border-right-color: rgba(0, 0, 0, 0.42); border-right-width: 2px; min-height: 192px;">
-                <ui:Label tabindex="-1" text="Mine&#x9;" display-tooltip-when-elided="true" name="sidebar-item-mine-label" style="font-size: 18px; -unity-text-outline-color: rgba(0, 0, 0, 0.75); background-color: rgba(0, 0, 0, 0.28); -unity-font-style: bold-and-italic; padding-left: 8px; padding-top: 8px; padding-bottom: 8px; height: 36px;" />
-                <ui:ScrollView name="sidebar-items-mine-scrollview" style="flex-grow: 0.5; height: auto; flex-shrink: 1; flex-basis: 0;" />
-                <ui:Label tabindex="-1" text="Read Only" display-tooltip-when-elided="true" name="sidebar-items-open-label" enable-rich-text="true" style="font-size: 18px; background-color: rgba(0, 0, 0, 0.28); border-top-width: 1px; border-top-color: rgba(0, 0, 0, 0.4); -unity-font-style: bold-and-italic; padding-left: 8px; padding-top: 8px; padding-bottom: 8px; height: 36px;" />
-                <ui:ScrollView name="sidebar-items-open-source-scrollview" style="flex-grow: 0.5; height: auto; flex-shrink: 1; flex-basis: 0;" />
+        <ui:VisualElement name="main-panel" class="flex-grow layout-row">
+            <ui:VisualElement name="sidebar" class="sidebar-container no-grow">
+                <ui:Label tabindex="-1" text="Mine&#x9;" display-tooltip-when-elided="true" name="sidebar-item-mine-label" class="sidebar-header sidebar-header-mine" />
+                <ui:ScrollView name="sidebar-items-mine-scrollview" class="flex-grow-half flex-shrink" />
+                <ui:Label tabindex="-1" text="Read Only" display-tooltip-when-elided="true" name="sidebar-items-open-label" enable-rich-text="true" class="sidebar-header sidebar-header-readonly" />
+                <ui:ScrollView name="sidebar-items-open-source-scrollview" class="flex-grow-half flex-shrink" />
             </ui:VisualElement>
-            <ui:VisualElement name="content-body" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 8px; margin-right: 8px; margin-top: 8px;">
-                <ui:VisualElement name="content-body" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); margin-left: 8px; margin-right: 8px; margin-top: 8px; position: relative; left: auto; top: auto; right: auto; bottom: auto;">
-                    <ui:VisualElement name="core" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; max-height: none; border-left-color: rgba(87, 87, 87, 0.57); border-right-color: rgba(87, 87, 87, 0.57); border-top-color: rgba(87, 87, 87, 0.57); border-bottom-color: rgba(87, 87, 87, 0.57); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; height: 196px; min-height: 196px;">
-                        <ui:VisualElement name="prop-details" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-shrink: 1;">
-                            <ui:TextField picking-mode="Ignore" label="Name:" name="name-field" style="font-size: 12px;" />
-                            <ui:TextField picking-mode="Ignore" label="Description:" value="filler text" multiline="true" auto-correction="false" name="description-field" style="font-size: 12px; max-height: 96px; min-height: 96px; flex-grow: 1; align-self: stretch; flex-wrap: nowrap; white-space: normal;" />
-                            <uie:ObjectField label="Icon:" allow-scene-objects="false" type="UnityEngine.Sprite, UnityEngine.CoreModule" name="icon-field" style="font-size: 12px;" />
-                            <ui:Toggle label="Open Source:" name="open-source-toggle" tooltip="Open Source means that this prop will be available for other users to download into their SDK and inspect/reuse pieces of the prefab." style="font-size: 12px;" />
+            <ui:VisualElement name="content-body" class="flex-grow content-container">
+                <ui:VisualElement name="content-body" class="flex-grow content-container">
+                    <ui:VisualElement name="core" class="no-grow layout-row panel-container core-container">
+                        <ui:VisualElement name="prop-details" class="flex-grow flex-shrink">
+                            <ui:TextField picking-mode="Ignore" label="Name:" name="name-field" class="form-field" />
+                            <ui:TextField picking-mode="Ignore" label="Description:" value="filler text" multiline="true" auto-correction="false" name="description-field" class="multiline-description" />
+                            <uie:ObjectField label="Icon:" allow-scene-objects="false" type="UnityEngine.Sprite, UnityEngine.CoreModule" name="icon-field" class="form-field" />
+                            <ui:Toggle label="Open Source:" name="open-source-toggle" tooltip="Open Source means that this prop will be available for other users to download into their SDK and inspect/reuse pieces of the prefab." class="form-field" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="icon-preview-area" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; width: 128px; height: initial; align-items: center; justify-content: space-between; align-self: flex-start;">
-                            <ui:VisualElement name="icon-preview" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 128px; height: 128px;" />
-                            <ui:Button text="Snap Icon" display-tooltip-when-elided="true" name="snapshot-icon-button" style="font-size: 16px;" />
+                        <ui:VisualElement name="icon-preview-area" class="no-grow no-shrink icon-preview-container">
+                            <ui:VisualElement name="icon-preview" class="icon-preview" />
+                            <ui:Button text="Snap Icon" display-tooltip-when-elided="true" name="snapshot-icon-button" class="secondary-button" />
                         </ui:VisualElement>
                     </ui:VisualElement>
-                    <ui:ScrollView>
-                        <ui:VisualElement name="core" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: column; max-height: 300px; border-left-color: rgba(87, 87, 87, 0.57); border-right-color: rgba(87, 87, 87, 0.57); border-top-color: rgba(87, 87, 87, 0.57); border-bottom-color: rgba(87, 87, 87, 0.57); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; margin-top: 8px; min-height: auto;">
-                            <ui:Label tabindex="-1" text="Location Offsets" display-tooltip-when-elided="true" name="location-offsets" style="-unity-text-align: upper-center; font-size: 18px; -unity-font-style: bold;" />
-                            <uie:PropertyField name="location-offset-field" />
+                    <ui:Template src="project://database/Assets/Resources/UI/Prop%20SDK/LocationOffsetPanel.uxml" name="location-offset-panel" />
+                    <ui:Instance template="location-offset-panel" name="location-offset-container" />
+                    <ui:VisualElement name="basetype-component-area" class="flex-grow layout-row" style="max-height: 65%; margin-top: 6px;">
+                        <ui:VisualElement name="base-types" tooltip="A prop may only have a single base type" class="flex-grow half-width panel-container" style="margin-right: 3px;">
+                            <ui:Label tabindex="-1" text="Base Types" display-tooltip-when-elided="true" class="section-title" />
+                            <ui:ScrollView name="base-type-scrollview" class="layout-row" />
                         </ui:VisualElement>
-                        <ui:VisualElement name="basetype-component-area" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; max-height: 65%; margin-top: 8px;">
-                            <ui:VisualElement name="base-types" tooltip="A prop may only have a single base type" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 50%; border-left-color: rgba(87, 87, 87, 0.57); border-right-color: rgba(87, 87, 87, 0.57); border-top-color: rgba(87, 87, 87, 0.57); border-bottom-color: rgba(87, 87, 87, 0.57); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; padding-left: 4px; padding-right: 0; padding-top: 8px; padding-bottom: 8px; margin-right: 4px;">
-                                <ui:Label tabindex="-1" text="Base Types" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 18px; -unity-font-style: bold;" />
-                                <ui:ScrollView name="base-type-scrollview" style="flex-direction: row;" />
-                            </ui:VisualElement>
-                            <ui:VisualElement name="components" tooltip="A prop may have multiple components" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 50%; border-left-color: rgba(87, 87, 87, 0.57); border-right-color: rgba(87, 87, 87, 0.57); border-top-color: rgba(87, 87, 87, 0.57); border-bottom-color: rgba(87, 87, 87, 0.57); border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; margin-left: 4px;">
-                                <ui:Label tabindex="-1" text="Components" display-tooltip-when-elided="true" name="Label" style="-unity-font-style: bold; font-size: 18px; -unity-text-align: upper-center;" />
-                                <ui:ScrollView name="components-scrollview" style="flex-direction: row;" />
-                            </ui:VisualElement>
+                        <ui:VisualElement name="components" tooltip="A prop may have multiple components" class="flex-grow half-width panel-container" style="margin-left: 3px;">
+                            <ui:Label tabindex="-1" text="Components" display-tooltip-when-elided="true" name="Label" class="section-title" />
+                            <ui:ScrollView name="components-scrollview" class="layout-row" />
                         </ui:VisualElement>
-                    </ui:ScrollView>
-                    <ui:VisualElement name="footer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; margin-bottom: 4px; margin-top: 4px; border-top-color: rgb(27, 27, 27); border-top-width: 3px; border-left-color: rgb(27, 27, 27); border-right-color: rgb(27, 27, 27); border-bottom-color: rgb(27, 27, 27);">
-                        <ui:Button text="Export" display-tooltip-when-elided="true" name="export-button" style="align-items: center; align-self: center; font-size: 16px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="footer" class="no-grow no-shrink footer-container">
+                        <ui:Button text="Export" display-tooltip-when-elided="true" name="export-button" class="centered-button" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="select-a-prop" style="flex-grow: 1; background-color: rgb(56, 56, 56); margin-left: 8px; margin-right: 8px; margin-top: 8px; position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: flex; visibility: visible;">
-                    <ui:Label tabindex="-1" text="Please Select A Prop From The Sidebar or Create A New Prop" display-tooltip-when-elided="true" style="justify-content: space-around; align-self: stretch; -unity-text-align: middle-center; flex-grow: 1; flex-shrink: 1; font-size: 36px; white-space: normal; -unity-font-style: bold-and-italic; color: rgba(171, 171, 171, 0.71);" />
+                <ui:VisualElement name="select-a-prop" class="flex-grow default-overlay full-overlay">
+                    <ui:Label tabindex="-1" text="Please Select A Prop From The Sidebar or Create A New Prop" display-tooltip-when-elided="true" class="overlay-message" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="export-screen" style="flex-grow: 1; background-color: rgb(79, 79, 79); position: absolute; left: 0; top: 0; right: 0; bottom: 0; visibility: hidden; display: none;">
-            <ui:VisualElement name="export-stage-list" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
-            <ui:Button text="Back to Editor" display-tooltip-when-elided="true" name="back-to-editor-button" style="align-items: center; align-self: center;" />
+        <ui:VisualElement name="export-screen" class="flex-grow export-overlay full-overlay" style="visibility: hidden; display: none;">
+            <ui:VisualElement name="export-stage-list" class="flex-grow" />
+            <ui:Button text="Back to Editor" display-tooltip-when-elided="true" name="back-to-editor-button" class="centered-button" />
         </ui:VisualElement>
-        <ui:VisualElement name="login-required-screen" style="flex-grow: 1; background-color: rgb(56, 56, 56); position: absolute; left: 0; top: 0; right: 0; bottom: 0; visibility: visible; display: flex;">
-            <ui:Label tabindex="-1" text="To use the SDK, please sign in with your Endless Studios account." display-tooltip-when-elided="true" style="justify-content: space-around; align-self: stretch; -unity-text-align: middle-center; flex-grow: 1; flex-shrink: 1; font-size: 36px; white-space: normal; -unity-font-style: bold-and-italic; color: rgba(171, 171, 171, 0.71);" />
+        <ui:VisualElement name="login-required-screen" class="flex-grow default-overlay full-overlay">
+            <ui:Label tabindex="-1" text="To use the SDK, please sign in with your Endless Studios account." display-tooltip-when-elided="true" class="overlay-message" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="sidebar-ellipsis" style="flex-grow: 1; position: absolute; top: 0; left: 0; font-size: 18px; -unity-font-style: bold; border-left-color: rgba(0, 0, 0, 0.75); border-right-color: rgba(0, 0, 0, 0.75); border-top-color: rgba(0, 0, 0, 0.75); border-bottom-color: rgba(0, 0, 0, 0.75); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 2px; border-bottom-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; min-width: 128px; visibility: hidden; display: none; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background-color: rgb(56, 56, 56);">
-        <ui:Label tabindex="-1" text="Update Locally" display-tooltip-when-elided="true" name="update-button" style="-unity-font-style: normal; margin-bottom: 4px; font-size: 12px;" />
-        <ui:Label tabindex="-1" text="Delete Locally" display-tooltip-when-elided="true" name="delete-button" style="color: rgb(236, 0, 0); border-top-width: 1px; border-left-color: rgba(0, 0, 0, 0.82); border-right-color: rgba(0, 0, 0, 0.82); border-top-color: rgba(0, 0, 0, 0.82); border-bottom-color: rgba(0, 0, 0, 0.82); margin-top: 0; padding-top: 4px; font-size: 12px;" />
+    <ui:VisualElement name="sidebar-ellipsis" class="context-menu" style="visibility: hidden; display: none;">
+        <ui:Label tabindex="-1" text="Update Locally" display-tooltip-when-elided="true" name="update-button" class="menu-item" />
+        <ui:Label tabindex="-1" text="Delete Locally" display-tooltip-when-elided="true" name="delete-button" class="menu-item menu-item-delete" />
     </ui:VisualElement>
 </ui:UXML>

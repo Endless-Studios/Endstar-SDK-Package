@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68f769731034c128ebfd350b9bb0a90, type: 3}
+  m_Name: LocationOffsetConfig
+  m_EditorClassIdentifier: 
+  boundsRoundingMode: 0
+  meshCaptureDetail: 0.1
+  maxRecommendedBoundsVolume: 512
+  maxVisibleOffsets: 1024
+  gridLineFadeStartDistance: 8
+  gridLineMaxDistance: 32
+  locationOffsetSolidColor: {r: 1, g: 0.42, b: 0, a: 0.2}
+  locationOffsetWireColor: {r: 1, g: 0.42, b: 0, a: 0.8}
+  boundsColor: {r: 0.435, g: 0.91, b: 0.94, a: 0.8}
+  gridColor: {r: 0.4, g: 0.447, b: 0.91, a: 0.3}
+  locationOffsetScale: 0.98
+  debugLoggingEnabled: 0
+  triangleDebuggingEnabled: 0

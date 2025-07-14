@@ -1,0 +1,72 @@
+﻿:root {
+    /* Primary Colors */
+    --endless-orange: rgba(255, 107, 0, 1);
+    --space-grey: rgba(47, 45, 60, 1);
+    --tealionaire: rgba(111, 232, 240, 1);
+    --cornflower: rgba(102, 114, 232, 1);
+    --cool-grey: rgba(247, 249, 252, 1);
+    --pure-white: rgba(255, 255, 255, 1);
+
+    /* Secondary Colors */
+    --space-grey-dark: rgba(37, 33, 41, 1);
+    --space-grey-darker: rgba(18, 18, 23, 1);
+    --endless-orange-light: rgba(231, 98, 3, 1);
+    --endless-orange-dark: rgba(204, 74, 9, 1);
+    --tealionaire-light: rgba(50, 210, 220, 1);
+    --tealionaire-dark: rgba(18, 128, 103, 1);
+
+    /* Alpha variants */
+    --endless-orange-80: rgba(255, 107, 0, 0.8);
+    --endless-orange-50: rgba(255, 107, 0, 0.5);
+    --endless-orange-20: rgba(255, 107, 0, 0.2);
+
+    --space-grey-80: rgba(47, 45, 60, 0.8);
+    --space-grey-50: rgba(47, 45, 60, 0.5);
+    --space-grey-20: rgba(47, 45, 60, 0.2);
+
+    --tealionaire-80: rgba(111, 232, 240, 0.8);
+    --tealionaire-50: rgba(111, 232, 240, 0.5);
+    --tealionaire-20: rgba(111, 232, 240, 0.2);
+
+    --cornflower-80: rgba(102, 114, 232, 0.8);
+    --cornflower-50: rgba(102, 114, 232, 0.5);
+    --cornflower-20: rgba(102, 114, 232, 0.2);
+}
+
+/* Button styles */
+.endless-primary-button {
+    background-color: var(--endless-orange);
+    color: var(--pure-white);
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+
+.endless-secondary-button {
+    background-color: var(--tealionaire);
+    color: var(--space-grey);
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+
+/* Container styles */
+.endless-info-box {
+    background-color: var(--space-grey-20);
+    border-color: var(--space-grey-50);
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+.endless-success-box {
+    background-color: var(--tealionaire-20);
+    border-color: var(--tealionaire-50);
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+/* Active indicators */
+.endless-active-indicator {
+    background-color: var(--endless-orange);
+    border-color: var(--pure-white);
+}
