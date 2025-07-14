@@ -78,3 +78,8 @@ MonoBehaviour:
     type: 
     componentId: 151fb3bb-e21e-4638-a0af-e9221031fedf
     userExposed: 1
+  - name: ResizableVolume
+    type: Endless.Props.ReferenceComponents.ResizableVolumeReferences, Props, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    componentId: 7aa21324-1cb1-470d-a70f-1ad42da58837
+    userExposed: 1
