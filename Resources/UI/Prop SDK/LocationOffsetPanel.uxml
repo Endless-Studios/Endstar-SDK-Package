@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Resources/UI/Styles/EndlessBrandColors.uss?fileID=7433441132597879392&amp;guid=b2d11f0be947403685c7dcf6b198f9b2&amp;type=3#EndlessBrandColors" />
+    <Style src="project://database/Assets/Resources/UI/Prop%20SDK/LocationOffsetPanel.uss?fileID=7433441132597879392&amp;guid=8c70713d2e3b4ca3810701cda5f3dd49&amp;type=3#LocationOffsetPanel" />
+    <ui:VisualElement name="location-offset-container" class="panel-container">
+        <ui:VisualElement name="location-offset-header" class="panel-header">
+            <ui:Label text="Claimed Cells" display-tooltip-when-elided="true" name="location-offsets-title" class="panel-title" />
+            <ui:VisualElement name="header-buttons" class="header-buttons-container">
+                <ui:Button name="help-button" tooltip="Claimed cells define how much space your prop occupies in Endstar. They determine collision boundaries and pathfinding obstacles." class="icon-button help-button" />
+                <ui:Button name="options-button" class="icon-button options-button" style="display:none;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="location-offset-content" class="panel-content">
+            <ui:VisualElement name="content-row" class="content-row" style="align-self: stretch; justify-content: space-around;">
+                <ui:VisualElement name="status-container" class="flex-grow" style="flex-grow: 1;">
+                    <ui:VisualElement name="message-container" class="info-container status-container">
+                        <ui:Label name="status-message" text="Prop contains {x} claimed cells in a XxYxZ volume." class="status-message" style="flex-shrink: 1;" />
+                        <ui:VisualElement name="okay-icon" class="status-icon success-icon" />
+                        <ui:VisualElement name="warning-icon" class="status-icon warning-icon" style="display: none;" />
+                    </ui:VisualElement>
+                    <ui:Button text="Claimed Cell Wizard" display-tooltip-when-elided="true" name="location-offset-wizard-button" class="secondary-button" />
+                </ui:VisualElement>
+                <ui:VisualElement name="offset-axis-container" class="info-container centering-container" style="justify-content: center; align-self: center; flex-grow: 1; margin-bottom: 0;">
+                    <ui:Label text="Offset Axis" class="centering-title" style="flex-shrink: 1;" />
+                    <ui:VisualElement name="offset-controls" class="centering-controls" style="align-items: auto; align-self: auto; flex-direction: row; justify-content: flex-start; flex-grow: 1;">
+                        <ui:Toggle name="offset-x-toggle" text="X" class="axis-toggle" style="align-items: auto; flex-grow: 0.5; flex-shrink: 0.5;" />
+                        <ui:Toggle name="offset-z-toggle" text="Z" class="axis-toggle" style="align-items: auto; flex-grow: 0.5; flex-shrink: 0.5;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="location-offset-context-menu" class="context-menu" style="visibility: hidden; display: none;">
+        <ui:Label text="Open Config" display-tooltip-when-elided="true" name="open-config-button" class="menu-item" />
+        <ui:Label text="Clear claimed cells" display-tooltip-when-elided="true" name="clear-offsets-button" class="menu-item menu-item-delete" />
+    </ui:VisualElement>
+</ui:UXML>
