@@ -1,4 +1,4 @@
-@import url("project://database/Assets/Resources/UI/Styles/EndlessBrandColors.uss?fileID=7433441132597879392&guid=b2d11f0be947403685c7dcf6b198f9b2&type=3#EndlessBrandColors");
+@import url("../Styles/EndlessBrandColors.uss?fileID=7433441132597879392&guid=b2d11f0be947403685c7dcf6b198f9b2&type=3#EndlessBrandColors");
 .panel-header {
     flex-direction: row;
     justify-content: space-between;
