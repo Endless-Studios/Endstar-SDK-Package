@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/Resources/UI/Styles/EndlessBrandColors.uss?fileID=7433441132597879392&amp;guid=b2d11f0be947403685c7dcf6b198f9b2&amp;type=3#EndlessBrandColors" />
-    <Style src="project://database/Assets/Resources/UI/Prop%20SDK/Location%20Offsets/LocationOffsetWizard.uss?fileID=7433441132597879392&amp;guid=febbce38d460409eab19afb7fe355409&amp;type=3#LocationOffsetWizard" />
+    <Style src="../../Styles/EndlessBrandColors.uss?fileID=7433441132597879392&amp;guid=b2d11f0be947403685c7dcf6b198f9b2&amp;type=3#EndlessBrandColors" />
+    <Style src="./LocationOffsetWizard.uss?fileID=7433441132597879392&amp;guid=febbce38d460409eab19afb7fe355409&amp;type=3#LocationOffsetWizard" />
     <ui:VisualElement name="wizard-container">
         <ui:VisualElement name="wizard-header">
             <ui:Label text="Claimed Cell Wizard" name="wizard-title" class="title" />
