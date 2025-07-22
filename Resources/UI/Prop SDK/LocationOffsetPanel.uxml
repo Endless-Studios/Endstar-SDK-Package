@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/Resources/UI/Styles/EndlessBrandColors.uss?fileID=7433441132597879392&amp;guid=b2d11f0be947403685c7dcf6b198f9b2&amp;type=3#EndlessBrandColors" />
-    <Style src="project://database/Assets/Resources/UI/Prop%20SDK/LocationOffsetPanel.uss?fileID=7433441132597879392&amp;guid=8c70713d2e3b4ca3810701cda5f3dd49&amp;type=3#LocationOffsetPanel" />
+    <Style src="../Styles/EndlessBrandColors.uss?fileID=7433441132597879392&amp;guid=b2d11f0be947403685c7dcf6b198f9b2&amp;type=3#EndlessBrandColors" />
+    <Style src="./LocationOffsetPanel.uss?fileID=7433441132597879392&amp;guid=8c70713d2e3b4ca3810701cda5f3dd49&amp;type=3#LocationOffsetPanel" />
     <ui:VisualElement name="location-offset-container" class="panel-container">
         <ui:VisualElement name="location-offset-header" class="panel-header">
             <ui:Label text="Claimed Cells" display-tooltip-when-elided="true" name="location-offsets-title" class="panel-title" />
