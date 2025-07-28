@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Resources/UI/Prop%20Downloader%20Window/PropDownloaderWindow.uss?fileID=7433441132597879392&amp;guid=ce80abd2c84a2964fb7f6816625eb689&amp;type=3#PropDownloaderWindow" />
+    <Style src="./PropDownloaderWindow.uss?fileID=7433441132597879392&amp;guid=ce80abd2c84a2964fb7f6816625eb689&amp;type=3#PropDownloaderWindow" />
     <ui:VisualElement name="window" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
         <ui:VisualElement name="core" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); visibility: visible;">
             <ui:Label text="Download A Prop" name="title" style="align-items: center; align-self: stretch; -unity-text-align: upper-center; font-size: 24px; -unity-font-style: bold;" />
