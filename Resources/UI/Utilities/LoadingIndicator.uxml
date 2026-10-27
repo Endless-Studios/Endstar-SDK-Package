@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="loading-indicator" class="loading-indicator">
+        <ui:VisualElement name="loading-content" class="loading-content">
+            <ui:VisualElement name="loading-spinner" class="loading-spinner" />
+            <ui:Label name="loading-message" text="Loading..." class="loading-message" />
+            <ui:ProgressBar name="loading-progress" class="loading-progress" style="display: none;" />
+            <ui:Label name="progress-text" class="progress-text" style="display: none;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

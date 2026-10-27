@@ -1,0 +1,78 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="../Styles/EndstarSdkStyles.uss" />
+    
+    <!-- Operation Overlay -->
+    <ui:VisualElement name="operation-overlay" class="operation-overlay">
+        <ui:VisualElement name="operation-content" class="operation-content">
+            
+            <!-- Header -->
+            <ui:VisualElement name="operation-header" class="operation-header">
+                <ui:Label text="Asset Operation" name="operation-title" class="operation-title" />
+                <ui:Label text="Analyzing dependencies..." name="operation-subtitle" class="operation-subtitle" />
+            </ui:VisualElement>
+            
+            <!-- Dependency Tree Container -->
+            <ui:ScrollView name="dependency-scroll" class="operation-dependency-scroll">
+                <ui:VisualElement name="dependency-list" class="operation-dependency-list">
+                    <!-- Dependency items will be added dynamically -->
+                </ui:VisualElement>
+            </ui:ScrollView>
+            
+            <!-- Summary Section -->
+            <ui:VisualElement name="summary-section" class="operation-summary-section">
+                <ui:VisualElement name="summary-stats" class="operation-summary-stats">
+                    <ui:Label name="primary-count-label" text="Assets to process: 0" class="operation-summary-stat" />
+                    <ui:Label name="secondary-count-label" text="Already available: 0" class="operation-summary-stat" />
+                </ui:VisualElement>
+                <ui:Label name="summary-message" text="" class="operation-summary-message" />
+                <ui:Label name="validation-summary" text="Checking validation..." class="operation-validation-summary" style="display: none;" />
+            </ui:VisualElement>
+
+            <!-- Metadata Only Section (for exports only) -->
+            <ui:VisualElement name="metadata-only-section" class="operation-metadata-section" style="display: none;">
+                <ui:Toggle name="metadata-only-toggle" text="Metadata Only (reuse existing bundles)" class="operation-metadata-toggle" />
+                <ui:Label text="Skips platform builds and reuses existing asset bundles. Only updates name, description, icon, and Open Source status." class="operation-metadata-help" />
+            </ui:VisualElement>
+
+            <!-- Progress Section (hidden initially) -->
+            <ui:VisualElement name="progress-section" class="operation-progress-section" style="display: none;">
+                <ui:ProgressBar name="operation-progress" class="operation-progress-bar" />
+                <ui:Label name="progress-label" text="Preparing operation..." class="operation-progress-label" />
+            </ui:VisualElement>
+            
+            <!-- Footer Buttons -->
+            <ui:VisualElement name="button-container" class="operation-button-container">
+                <ui:Button text="Cancel" name="cancel-button" class="operation-secondary-button" />
+                <ui:Button text="Proceed" name="proceed-button" class="operation-primary-button" />
+                <ui:Button text="Close" name="close-button" class="operation-secondary-button" style="display: none;" />
+            </ui:VisualElement>
+            
+        </ui:VisualElement>
+    </ui:VisualElement>
+    
+    <!-- Dependency Item Template -->
+    <ui:VisualElement name="dependency-item-template" class="operation-dependency-item" style="display: none;">
+        <ui:Toggle name="item-toggle" class="operation-item-toggle" />
+        <ui:VisualElement name="item-indicator" class="operation-item-indicator" />
+        <ui:VisualElement name="item-icon" class="operation-item-icon" />
+        <ui:VisualElement name="item-info" class="operation-item-info">
+            <ui:Label name="item-name" text="Asset Name" class="operation-item-name" />
+            <ui:Label name="item-type" text="Asset Type" class="operation-item-type" />
+        </ui:VisualElement>
+        <ui:VisualElement name="item-status" class="operation-item-status">
+            <ui:Label name="status-text" text="Pending" class="operation-status-text" />
+            <ui:VisualElement name="status-icon" class="operation-status-icon" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    
+    <!-- Loading Item Template -->
+    <ui:VisualElement name="loading-item-template" class="operation-dependency-item" style="display: none;">
+        <ui:VisualElement name="loading-indicator" class="operation-item-indicator" />
+        <ui:VisualElement name="loading-icon" class="operation-item-icon" />
+        <ui:VisualElement name="loading-info" class="operation-item-info">
+            <ui:Label name="loading-text" text="Loading..." class="operation-item-name" />
+            <ui:Label name="loading-subtext" text="Analyzing dependencies" class="operation-item-type" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    
+</ui:UXML>
