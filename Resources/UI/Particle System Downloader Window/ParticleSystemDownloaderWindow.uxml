@@ -1,0 +1,39 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="./ParticleSystemDownloaderWindow.uss" />
+    <ui:VisualElement name="window" class="window">
+        <ui:VisualElement name="header" class="header-section">
+            <ui:Label text="Particle System Asset Browser" name="title-label" class="title-label" />
+        </ui:VisualElement>
+        <ui:VisualElement name="filter-bar" class="filter-bar">
+            <ui:VisualElement name="ownership-filter" class="filter-group">
+                <ui:Button text="Mine" name="mine-button" class="filter-button filter-button--active" />
+                <ui:Button text="Open Source" name="open-source-button" class="filter-button" />
+            </ui:VisualElement>
+            <ui:DropdownField name="category-filter-dropdown" class="category-filter-dropdown" />
+            <ui:VisualElement name="search-group" class="filter-group">
+                <ui:TextField name="search-field" class="search-field" />
+                <ui:Button text="×" name="clear-search-button" class="clear-search-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="content-section" class="content-section">
+            <ui:ScrollView name="content-list" class="content-list" />
+            <ui:Label name="status-label" class="status-label" style="display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="pagination-section" class="pagination-section">
+            <ui:Button text="◀" name="prev-page-button" class="pagination-button" />
+            <ui:Label name="page-info-label" text="1-20 of 100" class="page-info-label" />
+            <ui:Button text="▶" name="next-page-button" class="pagination-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="footer" class="footer-section">
+            <ui:Button text="Download" name="download-button" class="footer-button primary-button" />
+            <ui:Button text="Close" name="close-button" class="footer-button secondary-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="download-progress-overlay" class="download-progress-overlay" style="display: none; visibility: hidden;">
+            <ui:VisualElement name="download-progress-content" class="download-progress-content">
+                <ui:Label name="download-status-label" text="Preparing download..." class="download-status-label" />
+                <ui:ProgressBar name="download-progress-bar" class="download-progress-bar" />
+                <ui:Label name="download-details-label" class="download-details-label" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

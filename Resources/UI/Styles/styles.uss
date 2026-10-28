@@ -1,7 +1,3 @@
-/* Import brand colors */
-@import url("../Styles/EndlessBrandColors.uss");
-
-/* Existing styles */
 #generation-bounds-field > Label {
     margin-right: 5px;
 }
@@ -31,6 +27,7 @@
 }
 
 #visualization-flags-selector > .unity-base-field__input {
+    height: auto;
 }
 
 #visualization-flags-selector .unity-label {
@@ -47,7 +44,6 @@
     background-color: var(--space-grey-20);
 }
 
-/* New layout styles */
 .layout-row {
     flex-direction: row;
 }
@@ -56,36 +52,6 @@
     flex-direction: column;
 }
 
-.flex-grow {
-    flex-grow: 1;
-}
-
-.flex-grow-half {
-    flex-basis: 0;
-    flex-grow: 0.5;
-}
-
-.no-grow {
-    flex-grow: 0;
-}
-
-.no-shrink {
-    flex-shrink: 0;
-}
-
-.flex-shrink {
-    flex-shrink: 1;
-}
-
-.full-width {
-    width: 100%;
-}
-
-.half-width {
-    width: 50%;
-}
-
-/* Containers */
 .panel-container {
     border-width: 1px;
     border-color: var(--space-grey-50);
@@ -100,6 +66,7 @@
     border-right-width: 1px;
     border-right-color: var(--space-grey-50);
     min-height: 192px;
+    flex-direction: column;
 }
 
 .content-container {
@@ -116,10 +83,10 @@
     border-top-color: var(--space-grey-darker);
     margin-top: 8px;
     padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 4px;
 }
 
-/* Sidebar headers */
 .sidebar-header {
     font-size: 16px;
     -unity-font-style: bold;
@@ -137,7 +104,6 @@
     border-top-color: var(--space-grey-50);
 }
 
-/* Title styles */
 .section-title {
     -unity-text-align: upper-center;
     font-size: 16px;
@@ -145,7 +111,6 @@
     margin-bottom: 6px;
 }
 
-/* Button styles */
 .centered-button {
     align-self: center;
     font-size: 14px;
@@ -155,20 +120,6 @@
     background-color: var(--endless-orange-80);
     color: var(--pure-white);
     border-radius: 3px;
-}
-
-/* Overlay styles */
-.full-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding: 20px;
-}
-
-.default-overlay {
-    background-color: var(--space-grey-dark);
 }
 
 .export-overlay {
@@ -185,6 +136,10 @@
     white-space: normal;
     -unity-font-style: bold;
     color: var(--cool-grey);
+}
+
+.overlay-message-left {
+    -unity-text-align: middle-left;
 }
 
 /* Icon preview area */
@@ -204,7 +159,6 @@
     margin-bottom: 8px;
 }
 
-/* Prop details form */
 .multiline-description {
     font-size: 12px;
     max-height: 96px;
@@ -221,7 +175,6 @@
     margin-bottom: 6px;
 }
 
-/* Context menu */
 .context-menu {
     position: absolute;
     font-size: 14px;
@@ -252,14 +205,12 @@
     padding-top: 4px;
 }
 
-/* Location offset section */
 .location-offset-description {
     margin: 0 4px 6px 4px;
     white-space: normal;
     font-size: 12px;
 }
 
-/* Brand-themed buttons */
 .primary-button {
     background-color: var(--endless-orange-80);
     color: var(--pure-white);

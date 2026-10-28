@@ -1,5 +1,4 @@
-﻿/* Import brand colors */
-@import url("../../Styles/EndlessBrandColors.uss");
+﻿@import url("../../Styles/EndstarSdkStyles.uss");
 
 /* Global Styles */
 .title {
