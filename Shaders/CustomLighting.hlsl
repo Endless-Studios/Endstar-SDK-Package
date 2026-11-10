@@ -33,6 +33,26 @@ void MainLight_float(float3 WorldPos, out float3 Direction, out float3 Color, ou
 #endif
 }
 
+/*
+- Obtains the Light Cookie assigned to the Main Light
+- (For usage, You'd want to Multiply the result with your Light Colour)
+- To work in an Unlit Graph, requires keywords :
+	- Boolean Keyword, Global Multi-Compile "_LIGHT_COOKIES"
+*/
+void MainLightCookie_float(float3 WorldPos, out float3 Cookie)
+{
+#if SHADERGRAPH_PREVIEW
+    Cookie = 1;
+#else
+
+#if defined(_LIGHT_COOKIES)
+        Cookie = SampleMainLightCookie(WorldPos);
+#else
+    Cookie = 1;
+#endif
+#endif
+}
+
 void MainLight_half(float3 WorldPos, out half3 Direction, out half3 Color, out half DistanceAtten, out half ShadowAtten)
 {
 #if SHADERGRAPH_PREVIEW
@@ -88,7 +108,10 @@ void AdditionalLights_float(float3 SpecColor, float Smoothness, float3 WorldPosi
 	Smoothness = exp2(10 * Smoothness + 1);
 	WorldNormal = normalize(WorldNormal);
 	WorldView = SafeNormalize(WorldView);
-	int pixelLightCount = GetAdditionalLightsCount();
+	
+
+	uint pixelLightCount = GetAdditionalLightsCount();
+	
 	for (int i = 0; i < pixelLightCount; ++i)
 	{
 		Light light = GetAdditionalLight(i, WorldPosition);
@@ -97,7 +120,7 @@ void AdditionalLights_float(float3 SpecColor, float Smoothness, float3 WorldPosi
 		specularColor += LightingSpecular(attenuatedLightColor, light.direction, WorldNormal, WorldView, float4(SpecColor, 0), Smoothness);
 	}
 #endif
-
+    
 	Diffuse = diffuseColor;
 	Specular = specularColor;
 }

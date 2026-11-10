@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="../Styles/EndstarSdkStyles.uss" />
+    <ui:VisualElement name="asset-item" class="browser-asset-item">
+        <ui:VisualElement name="asset-icon-container" class="browser-asset-icon-container" />
+        <ui:VisualElement name="asset-info-container" class="browser-asset-info-container">
+            <ui:Label name="asset-name" text="Asset Name" class="browser-asset-name" />
+            <ui:Label name="asset-type" text="Asset Type" class="browser-asset-type" />
+            <ui:Label name="asset-description" text="Asset Description" class="browser-asset-description" />
+        </ui:VisualElement>
+        <ui:VisualElement name="asset-status-container" class="browser-asset-status-container">
+            <ui:VisualElement name="local-indicator" class="browser-local-indicator" style="display: none;" />
+            <ui:Label name="local-label" text="LOCAL" class="browser-local-label" style="display: none;" />
+            <ui:VisualElement name="download-indicator" class="browser-download-indicator" style="display: none;" />
+            <ui:Label name="download-label" text="NEW" class="browser-download-label" style="display: none;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

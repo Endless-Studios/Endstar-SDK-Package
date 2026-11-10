@@ -1,0 +1,56 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="./ParticleSystemSDK.uss" />
+    <ui:VisualElement name="window" class="flex-grow">
+        <uie:Toolbar style="justify-content: flex-start;">
+            <uie:ToolbarMenu tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="management-menu" text="File" />
+        </uie:Toolbar>
+        <ui:VisualElement name="main-panel" class="flex-grow layout-row">
+            <ui:VisualElement name="sidebar" class="sidebar-container no-grow">
+                <ui:Label tabindex="-1" text="Mine" display-tooltip-when-elided="true" name="sidebar-item-mine-label" class="sidebar-header sidebar-header-mine" />
+                <ui:ScrollView name="sidebar-items-mine-scrollview" class="flex-grow-half flex-shrink" />
+                <ui:Label tabindex="-1" text="Read Only" display-tooltip-when-elided="true" name="sidebar-items-open-label" enable-rich-text="true" class="sidebar-header sidebar-header-readonly" />
+                <ui:ScrollView name="sidebar-items-open-source-scrollview" class="flex-grow-half flex-shrink" />
+            </ui:VisualElement>
+            <ui:VisualElement name="content-body" class="flex-grow content-container">
+                <ui:VisualElement name="content-column" class="flex-grow content-container">
+                    <ui:ScrollView name="content-scroll" class="flex-grow">
+                    <ui:VisualElement name="core" class="no-grow layout-row panel-container core-container">
+                        <ui:VisualElement name="particle-system-details" class="flex-grow flex-shrink">
+                            <ui:TextField picking-mode="Ignore" label="Name:" name="name-field" class="form-field" />
+                            <ui:TextField picking-mode="Ignore" label="Description:" value="" multiline="true" auto-correction="false" name="description-field" class="multiline-description" />
+                            <uie:ObjectField label="Icon:" allow-scene-objects="false" type="UnityEngine.Sprite, UnityEngine.CoreModule" name="icon-field" class="form-field" />
+                            <ui:Toggle label="Open Source:" name="open-source-toggle" tooltip="Open Source means that this particle system will be available for other users to download into their SDK and inspect/reuse pieces of the prefab." class="form-field" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="icon-preview-area" class="no-grow no-shrink icon-preview-container">
+                            <ui:VisualElement name="icon-preview" class="icon-preview" />
+                            <ui:Button text="Snap Icon" display-tooltip-when-elided="true" name="snapshot-icon-button" class="secondary-button" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="category-area" tooltip="Choose the category that best describes this particle system" class="flex-grow panel-container" style="margin-top: 6px;">
+                        <ui:Label tabindex="-1" text="Category" display-tooltip-when-elided="true" class="section-title" />
+                        <ui:ScrollView name="category-scrollview" class="layout-row" />
+                    </ui:VisualElement>
+                    </ui:ScrollView>
+                    <EndlessEditor.Core.UI.ValidationPanel name="validation-panel" />
+                    <ui:VisualElement name="footer" class="no-grow no-shrink footer-container">
+                        <ui:Button text="Export" display-tooltip-when-elided="true" name="export-button" class="centered-button" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="select-an-asset" class="flex-grow default-overlay full-overlay">
+                    <ui:Label tabindex="-1" text="Please Select A Particle System From The Sidebar or Create A New One" display-tooltip-when-elided="true" class="overlay-message" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="export-screen" class="flex-grow export-overlay full-overlay" style="visibility: hidden; display: none;">
+            <ui:VisualElement name="export-stage-list" class="flex-grow" />
+            <ui:Button text="Back to Editor" display-tooltip-when-elided="true" name="back-to-editor-button" class="centered-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="login-required-screen" class="flex-grow default-overlay full-overlay">
+            <ui:Label tabindex="-1" text="To use the SDK, please sign in with your Endless Studios account." display-tooltip-when-elided="true" class="overlay-message" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="sidebar-ellipsis" class="context-menu" style="visibility: hidden; display: none;">
+        <ui:Label tabindex="-1" text="Update Locally" display-tooltip-when-elided="true" name="update-button" class="menu-item" />
+        <ui:Label tabindex="-1" text="Delete Locally" display-tooltip-when-elided="true" name="delete-button" class="menu-item menu-item-delete" />
+    </ui:VisualElement>
+</ui:UXML>

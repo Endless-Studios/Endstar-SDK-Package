@@ -1,0 +1,73 @@
+@import url("../Styles/EndlessBrandColors.uss");
+
+.validation-panel {
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top-width: 1px;
+    border-top-color: var(--space-grey-darker);
+}
+
+.validation-panel__header {
+    -unity-font-style: bold;
+    font-size: 13px;
+    margin-bottom: 6px;
+    margin-left: 2px;
+}
+
+.validation-panel__list {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.validation-row {
+    flex-direction: row;
+    align-items: center;
+    min-height: 34px;
+    margin-bottom: 4px;
+    padding: 4px 6px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: var(--space-grey-50);
+    background-color: var(--space-grey-50);
+}
+
+.validation-row--error {
+    border-color: var(--chinese-goldfish-50);
+}
+
+.validation-row--warning {
+    border-color: var(--endless-orange-50);
+}
+
+.validation-row__icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    background-image: resource('Assets/Resources/UI/Icons/status-warning.png');
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.validation-row--error .validation-row__icon {
+    -unity-background-image-tint-color: var(--chinese-goldfish);
+}
+
+.validation-row--success .validation-row__icon {
+    background-image: resource('Assets/Resources/UI/Icons/status-success.png');
+}
+
+.validation-row__message {
+    flex-grow: 1;
+    flex-shrink: 1;
+    white-space: normal;
+    margin-right: 6px;
+}
+
+.validation-row__button {
+    flex-shrink: 0;
+    min-width: 72px;
+    height: 24px;
+    margin-left: 4px;
+}

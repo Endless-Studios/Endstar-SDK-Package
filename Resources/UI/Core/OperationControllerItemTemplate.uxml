@@ -1,0 +1,18 @@
+﻿<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="../Styles/EndstarSdkStyles.uss" />
+
+    <!-- Dependency Item Template -->
+    <ui:VisualElement name="dependency-item" class="operation-dependency-item">
+        <ui:Toggle name="item-toggle" class="operation-item-toggle" />
+        <ui:VisualElement name="item-indicator" class="operation-item-indicator" />
+        <ui:VisualElement name="item-icon" class="operation-item-icon" />
+        <ui:VisualElement name="item-info" class="operation-item-info">
+            <ui:Label name="item-name" text="Asset Name" class="operation-item-name" />
+            <ui:Label name="item-type" text="Asset Type" class="operation-item-type" />
+        </ui:VisualElement>
+        <ui:VisualElement name="item-status" class="operation-item-status">
+            <ui:Label name="status-text" text="Pending" class="operation-status-text" />
+            <ui:VisualElement name="status-icon" class="operation-status-icon" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

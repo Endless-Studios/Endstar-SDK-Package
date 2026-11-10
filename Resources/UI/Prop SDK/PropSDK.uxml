@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="./styles.uss?fileID=7433441132597879392&amp;guid=4ac44bbf77a2d094da5cf62bc42736cd&amp;type=3#styles" />
+    <Style src="../Shared/PropFoundationSDKStyles.uss" />
     <ui:VisualElement name="window" class="flex-grow">
         <uie:Toolbar style="justify-content: flex-start;">
             <uie:ToolbarMenu tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="management-menu" text="File" />
@@ -12,7 +12,8 @@
                 <ui:ScrollView name="sidebar-items-open-source-scrollview" class="flex-grow-half flex-shrink" />
             </ui:VisualElement>
             <ui:VisualElement name="content-body" class="flex-grow content-container">
-                <ui:VisualElement name="content-body" class="flex-grow content-container">
+                <ui:VisualElement name="content-column" class="flex-grow content-container">
+                    <ui:ScrollView name="content-scroll" class="flex-grow">
                     <ui:VisualElement name="core" class="no-grow layout-row panel-container core-container">
                         <ui:VisualElement name="prop-details" class="flex-grow flex-shrink">
                             <ui:TextField picking-mode="Ignore" label="Name:" name="name-field" class="form-field" />
@@ -25,9 +26,9 @@
                             <ui:Button text="Snap Icon" display-tooltip-when-elided="true" name="snapshot-icon-button" class="secondary-button" />
                         </ui:VisualElement>
                     </ui:VisualElement>
-                    <ui:Template src="./LocationOffsetPanel.uxml" name="location-offset-panel" />
+                    <ui:Template src="../Shared/Location Offsets/LocationOffsetPanel.uxml" name="location-offset-panel" />
                     <ui:Instance template="location-offset-panel" name="location-offset-container" />
-                    <ui:VisualElement name="basetype-component-area" class="flex-grow layout-row" style="max-height: 65%; margin-top: 6px;">
+                    <ui:VisualElement name="basetype-component-area" class="flex-grow layout-row" style="margin-top: 6px;">
                         <ui:VisualElement name="base-types" tooltip="A prop may only have a single base type" class="flex-grow half-width panel-container" style="margin-right: 3px;">
                             <ui:Label tabindex="-1" text="Base Types" display-tooltip-when-elided="true" class="section-title" />
                             <ui:ScrollView name="base-type-scrollview" class="layout-row" />
@@ -37,11 +38,13 @@
                             <ui:ScrollView name="components-scrollview" class="layout-row" />
                         </ui:VisualElement>
                     </ui:VisualElement>
+                    </ui:ScrollView>
+                    <EndlessEditor.Core.UI.ValidationPanel name="validation-panel" />
                     <ui:VisualElement name="footer" class="no-grow no-shrink footer-container">
                         <ui:Button text="Export" display-tooltip-when-elided="true" name="export-button" class="centered-button" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="select-a-prop" class="flex-grow default-overlay full-overlay">
+                <ui:VisualElement name="select-an-asset" class="flex-grow default-overlay full-overlay">
                     <ui:Label tabindex="-1" text="Please Select A Prop From The Sidebar or Create A New Prop" display-tooltip-when-elided="true" class="overlay-message" />
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -50,7 +53,10 @@
             <ui:VisualElement name="export-stage-list" class="flex-grow" />
             <ui:Button text="Back to Editor" display-tooltip-when-elided="true" name="back-to-editor-button" class="centered-button" />
         </ui:VisualElement>
-        <ui:VisualElement name="login-required-screen" class="flex-grow default-overlay full-overlay">
+        <ui:VisualElement name="modules-required-screen" class="flex-grow default-overlay full-overlay" style="visibility: hidden; display: none;">
+            <ui:Label name="modules-required-message" tabindex="-1" text="Required Unity build modules are missing." display-tooltip-when-elided="true" class="overlay-message overlay-message-left" />
+        </ui:VisualElement>
+        <ui:VisualElement name="login-required-screen" class="flex-grow default-overlay full-overlay" style="visibility: hidden; display: none;">
             <ui:Label tabindex="-1" text="To use the SDK, please sign in with your Endless Studios account." display-tooltip-when-elided="true" class="overlay-message" />
         </ui:VisualElement>
     </ui:VisualElement>

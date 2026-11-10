@@ -1,17 +1,38 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="./PropDownloaderWindow.uss?fileID=7433441132597879392&amp;guid=ce80abd2c84a2964fb7f6816625eb689&amp;type=3#PropDownloaderWindow" />
-    <ui:VisualElement name="window" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-        <ui:VisualElement name="core" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); visibility: visible;">
-            <ui:Label text="Download A Prop" name="title" style="align-items: center; align-self: stretch; -unity-text-align: upper-center; font-size: 24px; -unity-font-style: bold;" />
-            <ui:Label text="My Assets" name="my-assets" style="align-items: center; align-self: stretch; -unity-text-align: upper-center; font-size: 18px; -unity-font-style: bold;" />
-            <ui:ScrollView name="prop-list" style="flex-grow: 1; margin-left: 16px; margin-right: 16px; min-height: 128px; border-bottom-color: rgba(74, 74, 74, 0.83); border-bottom-width: 2px; border-left-color: rgba(74, 74, 74, 0.83); border-right-color: rgba(74, 74, 74, 0.83); border-top-color: rgba(74, 74, 74, 0.83); border-top-width: 2px; border-right-width: 2px; border-left-width: 2px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px;" />
-            <ui:Label text="Open Source Assets" name="open-source-assets" style="align-items: center; align-self: stretch; -unity-text-align: upper-center; font-size: 18px; -unity-font-style: bold;" />
-            <ui:ScrollView name="open-source-list" style="flex-grow: 1; margin-left: 16px; margin-right: 16px; border-bottom-color: rgba(74, 74, 74, 0.83); border-bottom-width: 2px; border-left-color: rgba(74, 74, 74, 0.83); border-right-color: rgba(74, 74, 74, 0.83); border-top-color: rgba(74, 74, 74, 0.83); border-top-width: 2px; border-right-width: 2px; border-left-width: 2px; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px;" />
-            <ui:VisualElement name="footer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: center; min-height: 32px;">
-                <ui:Button text="Download" display-tooltip-when-elided="true" name="confirm-button" style="font-size: 18px;" />
-                <ui:Button text="Close" display-tooltip-when-elided="true" name="cancel-button" style="font-size: 18px;" />
+    <Style src="./PropDownloaderWindow.uss" />
+    <ui:VisualElement name="window" class="window">
+        <ui:VisualElement name="header" class="header-section">
+            <ui:Label text="Prop Asset Browser" name="title-label" class="title-label" />
+        </ui:VisualElement>
+        <ui:VisualElement name="filter-bar" class="filter-bar">
+            <ui:VisualElement name="ownership-filter" class="filter-group">
+                <ui:Button text="Mine" name="mine-button" class="filter-button filter-button--active" />
+                <ui:Button text="Open Source" name="open-source-button" class="filter-button" />
+            </ui:VisualElement>
+            <ui:VisualElement name="search-group" class="filter-group">
+                <ui:TextField name="search-field" class="search-field" />
+                <ui:Button text="×" name="clear-search-button" class="clear-search-button" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="downloading-root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; left: 0; top: 0; right: 0; bottom: 0; visibility: hidden; display: none; justify-content: space-around;" />
+        <ui:VisualElement name="content-section" class="content-section">
+            <ui:ScrollView name="content-list" class="content-list" />
+            <ui:Label name="status-label" class="status-label" style="display: none;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="pagination-section" class="pagination-section">
+            <ui:Button text="◀" name="prev-page-button" class="pagination-button" />
+            <ui:Label name="page-info-label" text="1-20 of 100" class="page-info-label" />
+            <ui:Button text="▶" name="next-page-button" class="pagination-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="footer" class="footer-section">
+            <ui:Button text="Download" name="download-button" class="footer-button primary-button" />
+            <ui:Button text="Close" name="close-button" class="footer-button secondary-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="download-progress-overlay" class="download-progress-overlay" style="display: none; visibility: hidden;">
+            <ui:VisualElement name="download-progress-content" class="download-progress-content">
+                <ui:Label name="download-status-label" text="Preparing download..." class="download-status-label" />
+                <ui:ProgressBar name="download-progress-bar" class="download-progress-bar" />
+                <ui:Label name="download-details-label" class="download-details-label" />
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

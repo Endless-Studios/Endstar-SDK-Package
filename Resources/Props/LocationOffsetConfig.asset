@@ -12,16 +12,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68f769731034c128ebfd350b9bb0a90, type: 3}
   m_Name: LocationOffsetConfig
   m_EditorClassIdentifier: 
-  boundsRoundingMode: 0
-  meshCaptureDetail: 0.1
+  usePhysicsBasedGenerator: 1
+  boundsRoundingMode: 2
+  terrainHeightPercentage: 0.5
+  terrainCornersRequired: 4
+  meshCaptureDetail: 0.45
+  allowNegativeYOffsets: 1
   maxRecommendedBoundsVolume: 512
-  maxVisibleOffsets: 1024
+  maxVisibleOffsetsHandles: 512
   gridLineFadeStartDistance: 8
   gridLineMaxDistance: 32
+  gridVisibleRadius: 4
+  gridEdgeFadeCells: 2
+  gridCenterOnPivot: 1
+  enableGPUInstancing: 1
+  gpuInstancingThreshold: 100
+  gpuInstancedFadeStartDistance: 30
+  gpuInstancedFadeEndDistance: 250
+  foundationInteriorCulling: 0
+  foundationAggressiveVerticalCulling: 0
+  foundationMeshStitching: 0
+  foundationMeshStitchingThreshold: 512
+  enablePointCloudRenderer: 1
+  pointCloudThreshold: 32
+  pointCloudSize: 4
+  pointCloudAdaptiveSize: 1
+  pointCloudSpatialCulling: 1
+  pointCloudVisibleRadius: 16
+  pointCloudEdgeFadeCells: 4
+  pointCloudSurfaceDistinction: 1
+  pointCloudSurfaceColor: {r: 1, g: 0.42, b: 0, a: 0.9}
+  pointCloudInteriorColor: {r: 0.5, g: 0.5, b: 0.8, a: 0.4}
+  pointCloudHeightGradient: 1
+  pointCloudHeightMin: -5
+  pointCloudHeightMax: 20
+  pointCloudHeightColorLow: {r: 0.2, g: 0.4, b: 1, a: 0.8}
+  pointCloudHeightColorHigh: {r: 1, g: 0.2, b: 0.2, a: 0.8}
+  pointCloudHeightGradientStrength: 0.6
+  pointCloudDepthFade: 1
+  pointCloudDepthFadeStart: 30
+  pointCloudDepthFadeEnd: 100
+  pointCloudDepthFadeMinAlpha: 0.15
+  pointCloudLODEnabled: 1
+  pointCloudLODNearDistance: 8
+  pointCloudLODFarDistance: 16
+  enableFoundationCompression: 1
+  compressionThreshold: 512
   locationOffsetSolidColor: {r: 1, g: 0.42, b: 0, a: 0.2}
   locationOffsetWireColor: {r: 1, g: 0.42, b: 0, a: 0.8}
+  terrainOffsetSolidColor: {r: 1, g: 1, b: 1, a: 0.15}
+  terrainOffsetWireColor: {r: 1, g: 1, b: 1, a: 0.5}
+  debugSurfaceLayerColor: {r: 0, g: 1, b: 0, a: 1}
   boundsColor: {r: 0.435, g: 0.91, b: 0.94, a: 0.8}
   gridColor: {r: 0.4, g: 0.447, b: 0.91, a: 0.3}
   locationOffsetScale: 0.98
   debugLoggingEnabled: 0
   triangleDebuggingEnabled: 0
+  debugCubesSurfaceLayer: 0

@@ -1,0 +1,94 @@
+/* Loading Indicator Styles */
+.loading-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.loading-indicator--visible {
+    display: flex;
+    opacity: 1;
+}
+
+.loading-indicator--inline {
+    position: relative;
+    background-color: transparent;
+    height: auto;
+    min-height: 60px;
+}
+
+.loading-content {
+    background-color: var(--space-grey-dark);
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: var(--endless-orange-80);
+    padding: 20px;
+    align-items: center;
+    min-width: 200px;
+}
+
+.loading-indicator--inline .loading-content {
+    background-color: transparent;
+    border-width: 0;
+    padding: 10px;
+}
+
+.loading-spinner {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border-width: 3px;
+    border-color: var(--endless-orange-80) transparent transparent transparent;
+    margin-bottom: 12px;
+}
+
+.loading-message {
+    font-size: 14px;
+    color: var(--pure-white);
+    -unity-text-align: middle-center;
+    margin-bottom: 8px;
+}
+
+.loading-progress {
+    width: 200px;
+    height: 20px;
+    margin-bottom: 8px;
+}
+
+.loading-progress .unity-progress-bar__background {
+    background-color: var(--space-grey-50);
+    border-radius: 10px;
+}
+
+.loading-progress .unity-progress-bar__progress {
+    background-color: var(--endless-orange-80);
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: var(--cool-grey);
+    -unity-text-align: middle-center;
+}
+
+/* Spinner Animation */
+.loading-spinner {
+    rotate: 0deg;
+}
+
+.loading-indicator--visible .loading-spinner {
+    rotate: 360deg;
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
